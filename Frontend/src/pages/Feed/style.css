@@ -1,22 +1,89 @@
-.postList {
-  width: 100%;
-  max-width: 580px;
-  margin: 0 auto;
-  padding: 0 30px;
+@media only screen and (max-width: 1500px) {
+  .postList {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  * {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .postList article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-top: 30px;
+  }
+  .postList article header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .postList article header .place {
+    color: rgb(139, 139, 139);
+  }
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .user-info span {
+    font-size: 13px;
+  }
+  .user-info span place {
+    font-size: 11px;
+    color: #666;
+    margin-top: 3px;
+  }
+  .postList article > img {
+    width: 100%;
+  }
+  .postList article footer {
+    padding: 20px;
+  }
+  .postList article footer p {
+    font-size: 13px;
+    margin-top: 2px;
+    line-height: 18px;
+  }
+  .postList article footer span {
+    color: #7159c1;
+    display: block;
+  }
+  .liketest {
+    background-color: #666;
+    padding: 0;
+  }
+  .actions {
+    margin-bottom: 10px;
+  }
+  .actions img {
+    height: 20px;
+    margin-right: 10px;
+  }
+  .actions button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .imageFeed {
+    width: 520px;
+  }
+  .likedPostClick {
+    font-size: 112px;
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 130px;
+  }
 }
-.postList article {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  margin-top: 30px;
-}
-.postList article header {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.postList article .use-info {
-  display: flex;
-  flex-direction: column;
-  color: blue;
+@media only screen and (max-width: 600px) {
+  .imageFeed {
+    width: 332px;
+  }
+  .likedPostClick {
+    font-size: 112px;
+    margin-left: 90px;
+    margin-top: 60px;
+  }
 }

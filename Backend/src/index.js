@@ -7,9 +7,14 @@ const app = express();
 
 const server = require("http").Server(app);
 
-const io = require("socket.io")(server);
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
+});
 
-mongoose.connect("mongodb://localhost:27017/instagram", {
+mongoose.connect("mongodb://192.168.149.82:27017/instagram", {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
@@ -28,4 +33,4 @@ app.use(
 
 app.use(require("./routes"));
 
-server.listen(3333);
+server.listen(3333, () => console.log("funcionando"));
